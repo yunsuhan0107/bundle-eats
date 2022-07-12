@@ -1,3 +1,3 @@
-# 번들 이츠
+# Bundle Eats
 
-Flutter 기반 모바일 애플리케이션, 번들 이츠의 Repository입니다.
+This is a GitHub repository for Bundle Eats: a mobile application based on Flutter.
