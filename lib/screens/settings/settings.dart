@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
 
-void main() => runApp(const MyApp());
-
 List _elements = [
   {'name': '프로필', 'group': '앱 설정'},
   {'name': '공지사항', 'group': '기타'},
@@ -11,8 +9,8 @@ List _elements = [
   {'name': '약관', 'group': '기타'},
 ];
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Settings extends StatelessWidget {
+  const Settings({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
