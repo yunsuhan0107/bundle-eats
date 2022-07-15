@@ -2,28 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
 import 'package:meta/meta.dart';
 
-List _elements = [
-  {'name': '프로필', 'group': '앱 설정'},
-  {'name': '공지사항', 'group': '기타'},
-  {'name': '이벤트', 'group': '기타'},
-  {'name': '환경설정', 'group': '앱 설정'},
-  {'name': '약관', 'group': '기타'},
-];
-
 class MySettings extends StatelessWidget {
   List<Menus> menus = [
     const Menus(
-      menu: 'My Profile',
+      menu: '프로필',
     ),
     const Menus(
-      menu: 'Setting1',
+      menu: '공지사항',
     ),
     const Menus(
-      menu: 'Setting2',
+      menu: '이벤트',
     ),
     const Menus(
-      menu: 'Settings3',
+      menu: '환경설정',
     ),
+    const Menus(
+      menu: '약관',
+    ),
+    const Menus(menu: '버그 신고'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -38,8 +34,8 @@ class MySettings extends StatelessWidget {
               return Card(
                 child: ListTile(
                   leading: CircleAvatar(
-                    radius: 28,
-                    backgroundColor: Colors.pink,
+                    radius: 20,
+                    backgroundColor: Colors.blue,
                   ), //need to add image sourc
                   title: Text(menu.menu),
                   trailing: const Icon(Icons.arrow_forward),
