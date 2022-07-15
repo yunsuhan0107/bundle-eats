@@ -4,7 +4,7 @@ A mobile application based on Flutter; A delivery app with bundling feautres for
 
 ## Contributors
 
-- Jiwoong Cha
+- Jiwung(Ji) Cha
 - Jaehong Park
 - Yunsu Han
 - Gyungtae Kim
