@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
 import 'package:meta/meta.dart';
+import 'package:bundle_eats/screens/home/components/navigation_bar.dart'
+    as nav_bar;
 
 class MySettings extends StatelessWidget {
   List<Menus> menus = [
@@ -24,31 +26,33 @@ class MySettings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Profile'),
-        ),
-        body: ListView.builder(
-            itemCount: menus.length,
-            itemBuilder: (context, index) {
-              final menu = menus[index];
-              return Card(
-                child: ListTile(
-                  leading: CircleAvatar(
-                    radius: 20,
-                    backgroundColor: Colors.blue,
-                  ), //need to add image sourc
-                  title: Text(menu.menu),
-                  trailing: const Icon(Icons.arrow_forward),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => SpecificProfile()),
-                    );
-                  },
-                ),
-              );
-            }));
+      appBar: AppBar(
+        title: const Text('Profile'),
+      ),
+      body: ListView.builder(
+        itemCount: menus.length,
+        itemBuilder: (context, index) {
+          final menu = menus[index];
+          return Card(
+            child: ListTile(
+              leading: const CircleAvatar(
+                radius: 20,
+                backgroundColor: Colors.blue,
+              ), //need to add image source
+              title: Text(menu.menu),
+              trailing: const Icon(Icons.arrow_forward),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SpecificProfile()),
+                );
+              },
+            ),
+          );
+        },
+      ),
+      bottomNavigationBar: const nav_bar.NavigationBar(),
+    );
   }
 }
 
