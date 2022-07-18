@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'components/order.dart';
+import 'package:bundle_eats/models/order.dart';
 import 'dart:convert';
 
 class OrderHistory extends StatefulWidget {
