@@ -43,6 +43,9 @@ class _NavigationBarState extends State<NavigationBar> {
       case 0:
         Navigator.pushNamed(context, '/home');
         break;
+      case 2:
+        Navigator.pushNamed(context, '/order_history');
+        break;
       case 3:
         Navigator.pushNamed(context, '/settings');
         break;

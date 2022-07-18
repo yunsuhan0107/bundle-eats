@@ -1,0 +1,16 @@
+[
+    {
+        "date": "4/25",
+        "restaurantName": "교촌치킨",
+        "food": "허니콤보",
+        "count": 1,
+        "price": 25000
+    },
+    {
+        "date": "5/10",
+        "restaurantName": "KFC",
+        "food": "핫크리스피",
+        "count": 1,
+        "price": 20000
+    }
+]
