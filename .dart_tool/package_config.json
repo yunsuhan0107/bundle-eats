@@ -153,7 +153,7 @@
     },
     {
       "name": "freezed_annotation",
-      "rootUri": "file:///Users/jiwungcha/dev/flutter/.pub-cache/hosted/pub.dartlang.org/freezed_annotation-2.0.3",
+      "rootUri": "file:///Users/jiwungcha/dev/flutter/.pub-cache/hosted/pub.dartlang.org/freezed_annotation-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -321,7 +321,7 @@
     },
     {
       "name": "rxdart",
-      "rootUri": "file:///Users/jiwungcha/dev/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.27.4",
+      "rootUri": "file:///Users/jiwungcha/dev/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.27.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -476,7 +476,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-07-19T14:08:15.396578Z",
+  "generated": "2022-07-19T15:30:41.271575Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }
