@@ -1,10 +1,3 @@
 # Bundle Eats
 
-A mobile application based on Flutter; A delivery app with bundling feautres for Android and iOS. 
-
-## Contributors
-
-- Jiwung(Ji) Cha
-- Jaehong Park
-- Yunsu Han
-- Gyungtae Kim
+This is a GitHub repository for Bundle Eats: a mobile application based on Flutter.

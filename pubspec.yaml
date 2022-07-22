@@ -1,6 +1,5 @@
 name: bundle_eats
 description: A mobile application for food delivery with a bundling feature.
-
  
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -28,7 +27,6 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  babstrap_settings_screen: ^0.1.3
   flutter:
     sdk: flutter
 
@@ -41,6 +39,8 @@ dependencies:
   grouped_list: ^5.1.2
   app_settings: ^4.1.8
   galleryimage: ^1.2.0
+  babstrap_settings_screen: ^0.1.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
