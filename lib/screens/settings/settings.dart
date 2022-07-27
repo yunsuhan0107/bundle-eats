@@ -92,7 +92,7 @@ class MySettings extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const BugReport(),
+                      builder: (context) => const BugReportPage(),
                     ),
                   );
                 }
@@ -281,8 +281,8 @@ class PolicyPage extends StatelessWidget {
   }
 }
 
-class BugReport extends StatelessWidget {
-  const BugReport({Key? key}) : super(key: key);
+class BugReportPage extends StatelessWidget {
+  const BugReportPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
