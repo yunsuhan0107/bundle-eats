@@ -5,6 +5,11 @@ import 'package:bundle_eats/screens/home/components/navigation_bar.dart'
     as nav_bar;
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'body.dart';
+import 'announcements.dart';
+import 'bug_report.dart';
+import 'events.dart';
+import 'policy.dart';
+import 'user_settings.dart';
 
 class MySettings extends StatelessWidget {
   List<Menus> menus = [
@@ -30,7 +35,7 @@ class MySettings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: const Text('설정'),
       ),
       body: ListView.builder(
         itemCount: menus.length,
@@ -43,12 +48,54 @@ class MySettings extends StatelessWidget {
               ), //need to add image source
               trailing: const Icon(Icons.arrow_forward),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ProfilePage(),
-                  ),
-                );
+                if (menus[index].menu == '프로필') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ProfilePage(),
+                    ),
+                  );
+                }
+                if (menus[index].menu == '공지사항') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AnnouncementPage(),
+                    ),
+                  );
+                }
+                if (menus[index].menu == '이벤트') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const EventPage(),
+                    ),
+                  );
+                }
+                if (menus[index].menu == '환경설정') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SettingsPage(),
+                    ),
+                  );
+                }
+                if (menus[index].menu == '약관') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PolicyPage(),
+                    ),
+                  );
+                }
+                if (menus[index].menu == '버그 신고') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const BugReport(),
+                    ),
+                  );
+                }
               },
             ),
           );
@@ -170,12 +217,79 @@ class Menus {
 // }
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("프로필"),
+          title: const Text("프로필"),
         ), //AppBar
-        body: Body()); //scaffold
+        body: const Body()); //scaffold
+  }
+}
+
+class AnnouncementPage extends StatelessWidget {
+  const AnnouncementPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("공지사항"),
+        ), //AppBar
+        body: const Announcements()); //scaffold
+  }
+}
+
+class EventPage extends StatelessWidget {
+  const EventPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("이벤트"),
+        ), //AppBar
+        body: const Events()); //scaffold
+  }
+}
+
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("환경설정"),
+        ), //AppBar
+        body: const UserSettings()); //scaffold
+  }
+}
+
+class PolicyPage extends StatelessWidget {
+  const PolicyPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("약관"),
+        ), //AppBar
+        body: const Policy()); //scaffold
+  }
+}
+
+class BugReport extends StatelessWidget {
+  const BugReport({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("버그 신고"),
+        ), //AppBar
+        body: const BugReport()); //scaffold
   }
 }
