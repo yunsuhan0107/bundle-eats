@@ -1,16 +1,23 @@
 [
     {
-        "date": "4/25",
+        "date": "2022년 4월 25일 오후 7시 10분",
         "restaurantName": "교촌치킨",
-        "food": "허니콤보",
+        "menu": "허니콤보 세트",
         "count": 1,
         "price": 25000
     },
     {
-        "date": "5/10",
+        "date": "2022년 6월 20일 오후 6시 00분",
         "restaurantName": "KFC",
-        "food": "핫크리스피",
+        "menu": "핫크리스피 치킨 + 콜라 1.25L",
         "count": 1,
         "price": 20000
+    },
+    {
+        "date": "2022년 7월 11일 오후 5시 30분",
+        "restaurantName": "BBQ",
+        "menu": "황금올리브 치킨",
+        "count": 1,
+        "price": 22000
     }
 ]

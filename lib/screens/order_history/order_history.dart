@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bundle_eats/models/order.dart';
+import 'package:bundle_eats/screens/order_detail/order_detail.dart';
 import 'dart:convert';
 
 class OrderHistory extends StatefulWidget {
@@ -54,7 +55,7 @@ class _OrderHistoryState extends State<OrderHistory> {
       itemCount: orders.length,
       itemBuilder: (context, index) {
         final order = orders[index];
-        final String result = "${order.food} ${order.count}개 ${order.price}원";
+        final String result = "${order.menu} ${order.count}개 ${order.price}원";
         return Card(
           child: ListTile(
             leading: SizedBox(
@@ -64,7 +65,10 @@ class _OrderHistoryState extends State<OrderHistory> {
             ),
             title: Text(order.restaurantName),
             subtitle: Text(result),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => OrderDetail(order: order)));
+            },
           ),
         );
       },

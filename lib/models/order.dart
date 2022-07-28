@@ -1,14 +1,14 @@
 class Order {
   final String date;
   final String restaurantName;
-  final String food;
+  final String menu;
   final int count;
   final int price;
 
   const Order({
     required this.date,
     required this.restaurantName,
-    required this.food,
+    required this.menu,
     required this.count,
     required this.price,
   });
@@ -17,7 +17,7 @@ class Order {
     return Order(
       date: json['date'],
       restaurantName: json['restaurantName'],
-      food: json['food'],
+      menu: json['menu'],
       count: json['count'],
       price: json['price'],
     );
