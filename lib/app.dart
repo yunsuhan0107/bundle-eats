@@ -1,5 +1,7 @@
+import 'package:bundle_eats/screens/order_history/order_history.dart';
 import 'package:flutter/material.dart';
 import 'screens/home/home.dart';
+import 'screens/order_history/order_history.dart';
 import 'screens/settings/settings.dart';
 
 class App extends StatelessWidget {
