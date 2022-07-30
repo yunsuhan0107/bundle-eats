@@ -11,6 +11,7 @@ class App extends StatelessWidget {
       home: const Home(),
       routes: {
         '/home': (context) => const Home(),
+        '/order_history': (context) => const OrderHistory(),
         '/settings': (context) => MySettings(),
       },
     );
