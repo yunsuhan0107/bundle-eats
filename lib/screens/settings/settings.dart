@@ -14,21 +14,21 @@ import 'user_settings.dart';
 class MySettings extends StatelessWidget {
   List<Menus> menus = [
     Menus(
-      menu: '프로필',
+      menu: "프로필",
     ),
     Menus(
-      menu: '공지사항',
+      menu: "공지사항",
     ),
     Menus(
-      menu: '이벤트',
+      menu: "이벤트",
     ),
     Menus(
-      menu: '환경설정',
+      menu: "환경설정",
     ),
     Menus(
-      menu: '약관',
+      menu: "약관",
     ),
-    Menus(menu: '버그 신고'),
+    Menus(menu: "버그 신고"),
   ];
 
   @override
@@ -46,9 +46,14 @@ class MySettings extends StatelessWidget {
                 radius: 20,
                 backgroundColor: Colors.blue,
               ), //need to add image source
+              title: Text(
+                menus[index].menu,
+                style: const TextStyle(
+                    fontSize: 14.0, fontWeight: FontWeight.bold),
+              ),
               trailing: const Icon(Icons.arrow_forward),
               onTap: () {
-                if (menus[index].menu == '프로필') {
+                if (menus[index].menu == "프로필") {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -56,7 +61,7 @@ class MySettings extends StatelessWidget {
                     ),
                   );
                 }
-                if (menus[index].menu == '공지사항') {
+                if (menus[index].menu == "공지사항") {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -64,7 +69,7 @@ class MySettings extends StatelessWidget {
                     ),
                   );
                 }
-                if (menus[index].menu == '이벤트') {
+                if (menus[index].menu == "이벤트") {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -72,7 +77,7 @@ class MySettings extends StatelessWidget {
                     ),
                   );
                 }
-                if (menus[index].menu == '환경설정') {
+                if (menus[index].menu == "환경설정") {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -80,7 +85,7 @@ class MySettings extends StatelessWidget {
                     ),
                   );
                 }
-                if (menus[index].menu == '약관') {
+                if (menus[index].menu == "약관") {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -88,7 +93,7 @@ class MySettings extends StatelessWidget {
                     ),
                   );
                 }
-                if (menus[index].menu == '버그 신고') {
+                if (menus[index].menu == "버그 신고") {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -136,7 +141,7 @@ class AnnouncementPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("공지사항"),
         ), //AppBar
-        body: const Announcements()); //scaffold
+        body: Announcements()); //scaffold
   }
 }
 
@@ -149,7 +154,7 @@ class EventPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("이벤트"),
         ), //AppBar
-        body: const Events()); //scaffold
+        body: Events()); //scaffold
   }
 }
 
