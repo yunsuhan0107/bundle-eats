@@ -49,38 +49,36 @@ class Events extends StatelessWidget {
 
   Widget _getItemUI(BuildContext context, int index) {
     return new Card(
-        child: new Column(
-      children: <Widget>[
-        new ListTile(
-          leading: new Image.asset(
-            _allEvents[index].image,
+        child: InkWell(
+      child: SizedBox(
+        width: double.infinity,
+        height: 250,
+        child: GridTile(
+          // ignore: sort_child_properties_last
+          child: Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+            image: AssetImage(_allEvents[index].image),
             fit: BoxFit.cover,
-            width: 100.0,
+          ))),
+          footer: Container(
+            // You can use GridTileBar instead
+            // ignore: sort_child_properties_last
+            child: Text(
+              _allEvents[index].duration,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+              textAlign: TextAlign.right,
+            ),
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+            color: Colors.black54,
           ),
-          title: new Text(
-            _allEvents[index].name,
-            style: new TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
-          ),
-          subtitle: new Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                new Text(_allEvents[index].duration,
-                    style: new TextStyle(
-                        fontSize: 11.0, fontWeight: FontWeight.normal)),
-              ]),
-        )
-      ],
+        ),
+      ),
+      onTap: () {},
     ));
   }
 }
-
-// class Events extends StatelessWidget {
-//   const Events({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     throw UnimplementedError();
-//   }
-// }
