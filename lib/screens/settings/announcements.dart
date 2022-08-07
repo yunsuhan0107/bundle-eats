@@ -30,8 +30,9 @@ class Announcements extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         body: new Padding(
-            padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-            child: getHomePageBody(context)));
+      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+      child: getHomePageBody(context),
+    ));
   }
 
   getHomePageBody(BuildContext context) {
@@ -59,6 +60,8 @@ class Announcements extends StatelessWidget {
                     style: new TextStyle(
                         fontSize: 11.0, fontWeight: FontWeight.normal)),
               ]),
+          trailing: const Icon(Icons.arrow_forward),
+          onTap: () {},
         )
       ],
     ));
