@@ -1,23 +1,70 @@
 [
     {
-        "date": "2022년 4월 25일 오후 7시 10분",
+        "orderID": "B3JKDC798429",
+        "year": 2022,
+        "month": 4,
+        "day": 25,
+        "time": "19시 10분",
+        "address": "경기도 광명시 안현로 12 345동 678호",
+        "phoneNumber": "010-1234-5678",
         "restaurantName": "교촌치킨",
-        "menu": "허니콤보 세트",
-        "count": 1,
-        "price": 25000
+        "orderNumber": 112,
+        "items": [
+            {
+                "menu": "후라이드 치킨",
+                "price": 25000,
+                "count": 1
+            }
+        ],
+        "totalPrice": 25000,
+        "deliveryFee": 3000,
+        "payment": "신용카드"
     },
     {
-        "date": "2022년 6월 20일 오후 6시 00분",
+        "orderID": "E8FVDK237894",
+        "year": 2022,
+        "month": 6,
+        "day": 20,
+        "time": "18시 00분",
+        "address": "서울특별시 강남구 테헤란로 12 378호",
+        "phoneNumber": "010-1234-5678",
         "restaurantName": "KFC",
-        "menu": "핫크리스피 치킨 + 콜라 1.25L",
-        "count": 1,
-        "price": 20000
+        "orderNumber": 35,
+        "items": [
+            {
+                "menu": "핫크리스피 치킨",
+                "price": 20000,
+                "count": 1
+            }
+        ],
+        "totalPrice": 20000,
+        "deliveryFee": 2000,
+        "payment": "카카오페이"
     },
     {
-        "date": "2022년 7월 11일 오후 5시 30분",
+        "orderID": "A9WEFI194852",
+        "year": 2022,
+        "month": 7,
+        "day": 11,
+        "time": "17시 30분",
+        "address": "경기도 안양시 동안구 139 598호",
+        "phoneNumber": "010-1234-5678",
         "restaurantName": "BBQ",
-        "menu": "황금올리브 치킨",
-        "count": 1,
-        "price": 22000
+        "orderNumber": 132,
+        "items": [
+            {
+                "menu": "황금올리브 치킨",
+                "price": 22000,
+                "count": 1
+            },
+            {
+                "menu": "치즈볼",
+                "price": 5000,
+                "count": 2
+            }
+        ],
+        "totalPrice": 32000,
+        "deliveryFee": 2500,
+        "payment": "네이버페이"
     }
 ]

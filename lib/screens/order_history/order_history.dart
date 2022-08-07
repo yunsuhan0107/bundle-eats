@@ -55,7 +55,14 @@ class _OrderHistoryState extends State<OrderHistory> {
       itemCount: orders.length,
       itemBuilder: (context, index) {
         final order = orders[index];
-        final String result = "${order.menu} ${order.count}개 ${order.price}원";
+        final String result;
+        if (order.items.length == 1) {
+          result =
+              "${order.items[0].menu} ${order.totalPrice + order.deliveryFee}원";
+        } else {
+          result =
+              "${order.items[0].menu} 외 ${order.items.length - 1}개 ${order.totalPrice + order.deliveryFee}원";
+        }
         return Card(
           child: ListTile(
             leading: SizedBox(

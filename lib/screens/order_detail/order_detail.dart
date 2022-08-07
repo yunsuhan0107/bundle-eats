@@ -31,25 +31,19 @@ class OrderDetail extends StatelessWidget {
                     fontSize: 21,
                   ),
                 ),
-                Text(
-                  "${order.menu} ${order.count}개",
-                  style: const TextStyle(
-                    fontSize: 17,
-                  ),
-                ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
-                  "주문일시: ${order.date}",
+                  "주문일시: ${order.year}년 ${order.month}월 ${order.day}일 ${order.time}",
                   style: const TextStyle(
                     fontSize: 17,
                     color: Colors.grey,
                   ),
                 ),
-                const Text(
-                  "주문번호: B21WE9342",
-                  style: TextStyle(
+                Text(
+                  "주문번호: ${order.orderID}",
+                  style: const TextStyle(
                     fontSize: 17,
                     color: Colors.grey,
                   ),
@@ -68,38 +62,52 @@ class OrderDetail extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: order.items.length,
+                  itemBuilder: (context, index) {
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "${order.items[index].menu} ${order.items[index].count}개",
+                          style: const TextStyle(
+                            fontSize: 17,
+                          ),
+                        ),
+                        Text(
+                          "${order.items[index].price}원",
+                          style: const TextStyle(
+                            fontSize: 17,
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Divider(
+                  thickness: 1,
+                  height: 1,
+                  color: Colors.grey,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      "${order.menu} ${order.count}개",
-                      style: const TextStyle(
-                        fontSize: 17,
-                      ),
-                    ),
-                    Text(
-                      "${order.price}원",
-                      style: const TextStyle(
-                        fontSize: 17,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
+                    const Text(
                       "배달비",
                       style: TextStyle(
                         fontSize: 17,
                       ),
                     ),
                     Text(
-                      "3000원",
-                      style: TextStyle(
+                      "${order.deliveryFee}",
+                      style: const TextStyle(
                         fontSize: 17,
                       ),
                     ),
@@ -127,7 +135,7 @@ class OrderDetail extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "${order.price + 3000}원",
+                      "${order.totalPrice + order.deliveryFee}원",
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 17,
@@ -137,8 +145,8 @@ class OrderDetail extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       "결제방법",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -146,8 +154,8 @@ class OrderDetail extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "신용카드",
-                      style: TextStyle(
+                      order.payment,
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 17,
                       ),
@@ -167,61 +175,54 @@ class OrderDetail extends StatelessWidget {
             width: double.infinity,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   "배달주소",
                   style: TextStyle(
                     fontSize: 15,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Text(
-                  "경기도 광명시 하안동 123 456동 789호",
-                  style: TextStyle(
+                  order.address,
+                  style: const TextStyle(
                     fontSize: 15,
                     color: Colors.grey,
                   ),
                 ),
-                Text(
-                  "(도로명) 경기도 광명시 안현로 123 456동 789호",
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.grey,
-                  ),
-                ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Divider(
+                const Divider(
                   thickness: 0.5,
                   height: 0.5,
                   color: Colors.grey,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "전화번호",
                   style: TextStyle(
                     fontSize: 15,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Text(
-                  "010-1234-5765",
-                  style: TextStyle(
+                  order.phoneNumber,
+                  style: const TextStyle(
                     fontSize: 15,
                     color: Colors.grey,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Divider(
+                const Divider(
                   thickness: 0.5,
                   height: 0.5,
                   color: Colors.grey,
