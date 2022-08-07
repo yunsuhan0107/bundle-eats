@@ -106,7 +106,7 @@ class OrderDetail extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "${order.deliveryFee}",
+                      "${order.deliveryFee}원",
                       style: const TextStyle(
                         fontSize: 17,
                       ),
