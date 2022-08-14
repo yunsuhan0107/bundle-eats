@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new
 
 import 'package:flutter/material.dart';
+import 'dart:async' show Future;
+import 'package:flutter/services.dart' show rootBundle;
 
 class AnnounceInfo {
   //--- Name Of Event
@@ -61,9 +63,58 @@ class Announcements extends StatelessWidget {
                         fontSize: 11.0, fontWeight: FontWeight.normal)),
               ]),
           trailing: const Icon(Icons.arrow_forward),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const announcementInfo(),
+              ),
+            );
+          },
         )
       ],
     ));
+  }
+}
+
+// ignore: camel_case_types
+class announcementInfo extends StatelessWidget {
+  const announcementInfo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("공지 사항"),
+      ), //AppBar
+      body: ReadTextFile(),
+    ); //scaffold
+  }
+}
+
+class ReadTextFile extends StatefulWidget {
+  const ReadTextFile({Key? key}) : super(key: key);
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _ReadTextFileState createState() => _ReadTextFileState();
+}
+
+class _ReadTextFileState extends State<ReadTextFile> {
+  String dataFromFile = "";
+
+  Future<void> readText() async {
+    final String response = await rootBundle.loadString('announce.txt');
+    setState(() {
+      dataFromFile = response;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    readText();
+    return Container(
+      child: Text(dataFromFile),
+    );
   }
 }
